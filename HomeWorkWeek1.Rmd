@@ -1,0 +1,216 @@
+---
+title: "DATA606 - Homework - Week 1"
+author: "Sergio Ortega Cruz"
+date: "August 30, 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Graded: 1.8, 1.10, 1.28, 1.36, 1.48, 1.50, 1.56, 1.70
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+**1.8 Smoking habits of UK residents.** A survey was conducted to study the smoking habits of UK residents. Below is a data matrix displaying a portion of the data collected in this survey. Note that “£” stands for British Pounds Sterling, “cig” stands for cigarettes, and “N/A” refers to a missing component of the data.
+
+
+|   	|	sex		| 	age 	|	marital 	| grossIncom	        | smoke 	| amtWeekend	| amtWeekdays |
+|-------|-----------|-----------|---------------|-----------------------|-----------|---------------|-------------|	
+|1      |Female     |    42     |  Single Under | £2,600                | Yes       | 12 cig/day    | 12 cig/day  |
+|2      |Male       |    44     |  Single       | £10,400 to £15,600    |  No       |    N/A        |   N/A       |
+|3      |Male       |    53     |  Married Above| £36,400               | Yes       | 6 cig/day     |  6 cig/day  |
+|.      |   .       |     .     |  .            | .                     | .         | .             |   .         |
+|.      |   .       |     .     |  .            | .                     | .         | .             |   .         |
+|.      |   .       |     .     |  .            | .                     | .         | .             |   .         |
+|1691   |Male		|	 40     |  Single       | £2,600 to £5,20		| Yes       | 8 cig/day     | 8 cig/day   |
+
+
+**(a) What does each row of the data matrix represent?**
+
+
+
+The Data represents Sex of the surveyed person, age , Marital status, Gross income (exact or approximate), number of cigarretes smoked during the weekend and weekdays
+
+
+**(b) How many participants were included in the survey?**
+
+1691
+
+
+**(c) Indicate whether each variable in the study is numerical or categorical. If numerical, identify as continuous or discrete. If categorical, indicate if the variable is ordinal.**
+
+- Index: Numerical Continous.
+- Sex: Categorical. 
+- Age: Numerical Discrete.
+- Marital Status: Categorical Ordinal (Showing different unmeasurable magnitudes).
+- grossIncom: Categorical Ordinal.
+- smoke: Categorical.
+- amtWeekend: Numerical Discrete.
+- amtWeekdays: Numerical Discrete.
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+**1.10 Cheaters, scope of inference.** Exercise 1.5 introduces a study where researchers studying the relationship between honesty, age, and self-control conducted an experiment on 160 children between the ages of 5 and 15. The researchers asked each child to toss a fair coin in private and to record the outcome (white or black) on a paper sheet, and said they would only reward children who report white. Half the students were explicitly told not to cheat and the others were not given any explicit instructions. Di↵erences were observed in the cheating rates in the instruction and no instruction groups, as well as some di↵erences across children’s characteristics within each group.
+
+**(a) Identify the population of interest and the sample in this study. **
+
+Children between the ages of 5 and 15
+
+
+**(b) Comment on whether or not the results of the study can be generalized to the population, and if the ﬁndings of the study can be used to establish causal relationships**
+
+
+I will say results can't be generalized for the population due the lack of information on a truly random sample selection, and the same lack of information will tell me that is not enough data to establish causal relationship but more a proxy analysis from a behavioral perspective
+
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+
+**1.28 Reading the paper.** Below are excerpts from two articles published in the NY Times:
+
+**(a) An article titled Risks: Smokers Found More Prone to Dementia states the following:**
+
+*“Researchers analyzed data from 23,123 health plan members who participated in a voluntary exam and health behavior survey from 1978 to 1985, when they were 50-60 years old. 23 years later, about 25% of the group had dementia, including 1,136 with Alzheimer’s disease and 416 with vascular dementia. After adjusting for other factors, the researchers concluded that pack-aday smokers were 37% more likely than nonsmokers to develop dementia, and the risks went up with increased smoking; 44% for one to two packs a day; and twice the risk for more than two packs.” *
+
+Based on this study, can we conclude that smoking causes dementia later in life? Explain your reasoning. 
+
+No, the study is observational and not an experimental protocol with control groups so no causal relation could be inferred
+
+**(b) Another article titled The School Bully Is Sleepy states the following:**
+
+*“The University of Michigan study, collected survey data from parents on each child’s sleep habits and asked both parents and teachers to assess behavioral concerns. About a third of the students studied were identiﬁed by parents or teachers as having problems with disruptive behavior or bullying. The researchers found that children who had behavioral issues and those who were identiﬁed as bullies were twice as likely to have shown symptoms of sleep disorders.” *
+
+A friend of yours who read the article says, “The study shows that sleep disorders lead to bullying in school children.” Is this statement justiﬁed? If not, how best can you describe the conclusion that can be drawn from this study?
+
+Causal relationship can't be defined since dependapble variable is not crystal clear with the available information the study argues behavioral problems can be caused due sleep disorders, but you can argue the other way too. If a conclusion need to be stated "Children with sleep disorders are more likely to bahavioural issues but not all behavioral issues are due sleep disorders."
+
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+**1.36 Exercise and mental health.** A researcher is interested in the effects of exercise on mental health and he proposes the following study: Use stratiﬁed random sampling to ensure representative proportions of 18-30, 31-40 and 41- 55 year olds from the population. Next, randomly assign half the subjects from each age group to exercise twice a week, and instruct the rest not to exercise. Conduct a mental health exam at the beginning and at the end of the study, and compare the results.
+
+**(a) What type of study is this?**
+Randomized Experiment
+
+**(b) What are the treatment and control groups in this study? **
+Treatment group half of the participants excercising twice a week
+Control group half of the participants not excercising.
+
+**(c) Does this study make use of blocking? If so, what is the blocking variable?** 
+Yes blocks of "Age"  since different stages of life will have different risks of mental health issues (young-less, older-more).
+
+**(d) Does this study make use of blinding? **
+You can say no if the full scope of the studio was explained before hand to all the participants and people not excercising can realize no-treatment at all
+
+**(e) Comment on whether or not the results of the study can be used to establish a causal relationship between exercise and mental health, and indicate whether or not the conclusions can be generalized to the population at large. **
+Causal relationship will be hard to prove with the provided information since the answer of the stratification in the last question risk can differ on the different blocks depending on age so more elemente are needed to arrive to this conclusion
+
+
+**(f) Suppose you are given the task of determining if this proposed study should get funding. Would you have any reservations about the study proposal?**
+Yes, assumptions of meaningful results are way to optimistic and more elements should be included in the study and the fact of getting immediate results is a phalacy since signs of mental health can be detected in longer periods of time.
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+**1.48 Stats scores**. Below are the ﬁnal exam scores of twenty introductory statistics students.
+
+```{r grades}
+grades <-c(57, 66, 69, 71, 72, 73, 74, 77, 78, 78, 79, 79, 81, 81, 82, 83, 83, 88, 89, 94)
+grades
+summary(grades)
+```
+
+Create a box plot of the distribution of these scores. The ﬁve number summary provided below may be useful.
+
+
+```{r boxp}
+boxplot(grades)
+```
+
+##1.50 Mix-and-match. Describe the distribution in the histograms below and match them to the box plots.##
+
+![image](C:\Users\sergioor\Documents\GitHub\DATA606Fall2018\graphs.png)
+
+a) Distribution Unimodal fairly normal (symmetric), Boxplot(2)
+b) This distribution is trimodal. Boxplot(3)
+c) This distribution is unimodal skewed to the right with a long tail.Boxplot (1)
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+
+**1.56 Distributions and appropriate statistics, Part II .** For each of the following, state whether you expect the distribution to be symmetric, right skewed, or left skewed. Also specify whether the mean or median would best represent a typical observation in the data, and whether the variability of observations would be best represented using the standard deviation or IQR. Explain your reasoning.
+
+(**a) Housing prices in a country where 25% of the houses cost below $350,000, 50% of the houses cost below $450,000, 75% of the houses cost below $1,000,000 and there are a meaningful number of houses that cost more than $6,000,000. **
+
+
+Since there are a  number of houses valued over $6,000,000, the distribution would be right skewed. In this case the median and IQR would be the best measurements, since they are less subject to the influence of the outliers at the higher price
+   
+
+**(b) Housing prices in a country where 25% of the houses cost below $300,000, 50% of the houses cost below $600,000, 75% of the houses cost below $900,000 and very few houses that cost more than $1,200,000. **
+
+This is a symmetrical (normal) distribution and mean and standard deviation will be good measurements for analysis outliers don't affect the analyisis
+
+
+**(c) Number of alcoholic drinks consumed by college students in a given week. Assume that most of these students don’t drink since they are under 21 years old, and only a few drink excessively.** 
+
+The distribution will be heavily influenced by outliers in the heavy drinkers group so right skewed and will be best described by median and IQR
+
+
+**(d) Annual salaries of the employees at a Fortune 500 company where only a few high level executives earn much higher salaries than the all other employees.**
+
+This is a typical distribution of income shape where right skewed form is highly pronounced so median and IQR is the way to go in this case.
+
+
+**----------------------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+**1.70 Heart transplants.** The Stanford University Heart Transplant Study was conducted to determine whether an experimental heart transplant program increased lifespan. Each patient entering the program was designated an ocial heart transplant candidate, meaning that he was gravely ill and would most likely beneﬁt from a new heart. Some patients got a transplant and some did not. The variable transplant indicates which group the patients were in; patients in the treatment group got a transplant and those in the control group did not. Another variable called survived was used to indicate whether or not the patient was alive at the end of the study.
+
+
+```{r mosaic}
+library (RCurl)
+url<-getURL("https://raw.githubusercontent.com/jbryer/DATA606Fall2018/master/data/openintro.org/Ch%201%20Exercise%20Data/heartTr.csv")
+df<-data.frame(read.csv(text=url,header=TRUE))
+head(df)
+summary (df)
+mosaicplot(table(df$transplant,df$survived))
+```
+
+
+**(a) Based on the mosaic plot, is survival independent of whether or not the patient got a transplant? Explain your reasoning.**
+
+```{r mosaic2}
+boxplot(df$survtime ~ df$transplant)
+```
+
+Survival is not independent of receiving the treatment. The proportion of survivors in the treatment group is larger than in the control group.
+
+**(b) What do the box plots below suggest about the eficacy (effectiveness) of the heart transplant treatment.**
+
+The box plots shows that the median survival time is higher for the treatment group. The IQR of the boxplots depicts a larger timeframe than the control group. The distribution of survival time is very small for the control group, but it is much larger for the treatment group . These boxplots suggest that the treatment is effective.
+
+**(c) What proportion of patients in the treatment group and what proportion of patients in the control group died? (d) One approach for investigating whether or not the treatment is e↵ective is to use a randomization technique**
+
+30 out of 34 members of the control group died 88%. 45 out of 69 members of the treatment group died 65%.
+
+**-i. What are the claims being tested? **
+
+
+    H0: The experimental heart transplant and survival time of the patient are independent,due to chance and do not have a relationship between them.
+    HA: The experimental heart transplant program and survival time of the patient are not due to chance nor independent. 
+**-ii. The paragraph below describes the set up for such approach, if we were to do it without using statistical software. Fill in the blanks with a number or phrase, whichever is appropriate.**
+
+	--We write alive on   ---**28**------ cards representing patients who were alive at the end of the study, and dead on --**75**---- cards representing patients who were not. Then, we shu✏e these cards and split them into two groups: one group of size  ----**69**------- representing treatment, and another group of size  ---**34**-------representing control. We calculate the di↵erence between the proportion of dead cards in the treatment and control groups (treatment control) and record this value. We repeat this 100 times to build a distribution centered at ----**0**------ . Lastly, we calculate the fraction of simulations where the simulated di↵erences in proportions are  --**greater than or equal to the observed difference**----------- . If this fraction is low, we conclude that it is unlikely to have observed such an outcome by chance and that the null hypothesis should be rejected in favor of the alternative.
+
+-iii. **What do the simulation results shown below suggest about the e↵ectiveness of the transplant program?**
+![image](C:\Users\sergioor\Documents\GitHub\DATA606Fall2018\graphs3.png)
+
+The simulation results suggest that the difference in survival rates is not due to chance and that we should reject the null hypothesis.
+
+
+
+
